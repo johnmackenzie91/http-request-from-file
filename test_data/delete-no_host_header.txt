@@ -1,0 +1,2 @@
+DELETE /route?name=Joe%20Bloggs/ 1
+Access-Control-Allow-Credentials: true

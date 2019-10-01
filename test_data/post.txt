@@ -1,0 +1,3 @@
+POST /route.php HTTP/1.1
+Host: example.com
+name1=value1&name2=value2
