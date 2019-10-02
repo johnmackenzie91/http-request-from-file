@@ -19,13 +19,20 @@ go get github.com/johnmackenzie91/http-request-from-file
 ## Getting Started
 
 ```cgo
+package main
+
+import (
+	"fmt"
+	"github.com/johnmackenzie91/http-request-from-file/requestfile"
+	"os"
+)
 
 func main() {
 	// open a file stream
-	f, _ := os.Open(tc.filePath)	
+	f, _ := os.Open("path/to/file")
 	// translate it into a *http.Request
-	req, err := requestfile.FromReadCloser("example.com", f)
-	
+	req, _ := requestfile.FromReadCloser("example.com", f)
+
 	fmt.Println(req.URL)
 	fmt.Println(req.Method)
 }
