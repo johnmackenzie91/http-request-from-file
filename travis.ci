@@ -1,0 +1,11 @@
+language: go
+      sudo: false
+      go:
+      - 1.13
+      before_install:
+      - go get github.com/mattn/goveralls
+      - go install github.com/golangci/golangci-lint/cmd/golangci-lint
+
+      script:
+      - go get -t -v ./...
+      - $GOPATH/bin/goveralls -service=travis-ci

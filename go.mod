@@ -1,4 +1,4 @@
-module github.com/johnmackenzie91/http-request-file
+module github.com/johnmackenzie91/http-request-from-file
 
 go 1.12
 
